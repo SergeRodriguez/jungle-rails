@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Product, type: :model do
   describe "Validations" do
-    let(:category) { Category.new(name: "electronics") }
+    let(:category) { Category.new(name: "sports") }
 
-    subject { described_class.new(name: "Television", price_cents: 1000000, quantity: 25, category: category) }
+    subject { described_class.new(name: "Ball", price_cents: 10000, quantity: 125, category: category) }
 
     it "is valid with all valid attributes" do
       expect(subject).to be_valid
